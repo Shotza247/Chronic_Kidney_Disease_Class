@@ -1,0 +1,47 @@
+artifact_path: file:c:/Users/RomeoNdlovu/Downloads/Learning Folder/LinkedIn Learning/Introduction
+  to DS/Ex_Files_Intro_to_Data_Science/Data Analysis/Chronic_Kidney_Disease_Class/mlruns/0/models/m-a1ac2192bbbb439f8f366473189fc14c/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.11.1
+model_id: m-a1ac2192bbbb439f8f366473189fc14c
+model_size_bytes: 76776
+model_uuid: m-a1ac2192bbbb439f8f366473189fc14c
+prompts: null
+run_id: 2c81c8cd657e47ee85e56decd2a148c1
+signature:
+  inputs: '[{"type": "long", "name": "Age", "required": true}, {"type": "long", "name":
+    "Blood Pressure", "required": true}, {"type": "double", "name": "Specific Gravity",
+    "required": true}, {"type": "long", "name": "Albumin", "required": true}, {"type":
+    "long", "name": "Sugar", "required": true}, {"type": "long", "name": "Red Blood
+    Cells", "required": true}, {"type": "long", "name": "Pus Cell", "required": true},
+    {"type": "long", "name": "Pus Cell clumps", "required": true}, {"type": "long",
+    "name": "Bacteria", "required": true}, {"type": "long", "name": "Blood Glucose",
+    "required": true}, {"type": "long", "name": "Blood Urea", "required": true}, {"type":
+    "double", "name": "Serum Creatinine", "required": true}, {"type": "long", "name":
+    "Sodium", "required": true}, {"type": "double", "name": "Potassium", "required":
+    true}, {"type": "double", "name": "Hemoglobin", "required": true}, {"type": "long",
+    "name": "Packed Cell Volume", "required": true}, {"type": "long", "name": "White
+    Blood Cell Count", "required": true}, {"type": "double", "name": "Red Blood Cell
+    Count", "required": true}, {"type": "long", "name": "Hypertension", "required":
+    true}, {"type": "long", "name": "Diabetes Mellitus", "required": true}, {"type":
+    "long", "name": "Coronary Artery Disease", "required": true}, {"type": "long",
+    "name": "Appetite", "required": true}, {"type": "long", "name": "Pedal Edema",
+    "required": true}, {"type": "long", "name": "Anemia", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-05-18 08:52:44.759491'
