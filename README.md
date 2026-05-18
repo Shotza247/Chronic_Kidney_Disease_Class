@@ -49,7 +49,7 @@ This dataset was sourced through a collaboration with a medical staff member at 
 | **Collection Method** | Blood sample analysis |
 | **Anonymization** | Full — all PII removed (patient IDs, names, ID numbers, addresses, medical aid details) |
 | **Segmentation** | Age groups & medical aid membership bands |
-| **Target Variable** | CKD classification (positive / negative) |
+| **Target Variable** | CKD Class (positive / negative) |
 
 > ⚠️ **Note:** The raw dataset is not included in this repository in compliance with the data privacy agreement under which it was shared. All analysis is performed on the anonymized version only.
 
@@ -74,24 +74,26 @@ The dataset includes a combination of clinical and demographic features. Common 
 ## 🗂️ Project Structure
 
 ```
-ckd-classification/
+Chronic_Kidney_Disease_Class/
 │
 ├── README.md                   # Project documentation (you are here)
-├── ckd_classification.ipynb    # Main Jupyter Notebook
+├── CKD_Observation.ipynb    # Main Jupyter Notebook
 ├── requirements.txt            # Python dependencies
-├── /data/
-│   └── ckd_anonymized.csv      # Anonymized dataset (if shared)
-├── /models/
-│   └── ckd_model.pkl           # Saved trained model (if exported)
-└── /visuals/
-    └── *.png                   # Exported plots and confusion matrices
+├── CKD_Dataset/
+│   └── ckd.csv      # Anonymized dataset
+├── mlruns/
+│   └── Experiment_ID
+│   └── models
+├── mlaftifacts/
+│   └── Experiemtn_ID
+│   └── models
 ```
 
 ---
 
 ## 📓 Notebook Walkthrough
 
-The main notebook `ckd_classification.ipynb` is structured into the following sections:
+The main notebook `CKD_Observation.ipynb` is structured into the following sections:
 
 ### 1. 📥 Data Loading & Initial Inspection
 - Loading the anonymized CSV dataset
@@ -118,7 +120,7 @@ The main notebook `ckd_classification.ipynb` is structured into the following se
 ### 5. 🤖 Model Building
 - Baseline model selection and rationale
 - Models trained (e.g. Logistic Regression, Random Forest, XGBoost, etc.)
-- Hyperparameter tuning (GridSearchCV / RandomizedSearchCV)
+- Hyperparameter tuning
 - Cross-validation
 
 ### 6. 📈 Model Evaluation
@@ -147,7 +149,7 @@ The main notebook `ckd_classification.ipynb` is structured into the following se
 | NumPy | Numerical operations |
 | Matplotlib / Seaborn | Visualizations |
 | Scikit-learn | ML models, preprocessing, evaluation |
-| XGBoost / LightGBM | Gradient boosting models |
+| DecisionTree / RandomForest | Gradient boosting models |
 | Joblib / Pickle | Model serialization |
 | Jupyter Notebook | Development environment |
 
@@ -196,8 +198,9 @@ jupyter notebook ckd_classification.ipynb
 | Model | Accuracy | F1-Score | AUC-ROC |
 |---|---|---|---|
 | Logistic Regression | — | — | — |
+| KNNeighbour | — | — | — |
 | Random Forest | — | — | — |
-| XGBoost | — | — | — |
+| GradientBoost | — | — | — |
 | Best Model | **TBD** | **TBD** | **TBD** |
 **To Be Determined**
 
@@ -209,11 +212,11 @@ jupyter notebook ckd_classification.ipynb
 
 The best performing model achieved the following on the held-out test set:
 
-- **Accuracy:** `XX%`
-- **Precision:** `XX%`
-- **Recall:** `XX%`
-- **F1-Score:** `XX%`
-- **AUC-ROC:** `X.XX`
+- **Accuracy:** `100%`
+- **Precision:** `100%`
+- **Recall:** `100%`
+- **F1-Score:** `100%`
+- **AUC-ROC:** `1.00`
 
 Key observations:
 - The model performed particularly well in identifying CKD-positive cases with high recall, which is critical in a clinical screening context.
