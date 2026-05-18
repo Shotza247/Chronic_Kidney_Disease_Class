@@ -1,0 +1,30 @@
+artifact_path: file:c:/Users/RomeoNdlovu/Downloads/Learning Folder/LinkedIn Learning/Introduction
+  to DS/Ex_Files_Intro_to_Data_Science/Data Analysis/Chronic_Kidney_Disease_Class/mlruns/0/models/m-01d2f85ed2c6476d8d1de08133603700/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.11.1
+model_id: m-01d2f85ed2c6476d8d1de08133603700
+model_size_bytes: 25855
+model_uuid: m-01d2f85ed2c6476d8d1de08133603700
+prompts: null
+run_id: 59324d9e2ee54a04b4f79d75674b6f25
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 24]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-05-18 09:14:14.235656'
