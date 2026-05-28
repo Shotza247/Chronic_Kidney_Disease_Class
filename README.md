@@ -204,13 +204,21 @@ jupyter notebook ckd_classification.ipynb
 | Best Model | **TBD** | **TBD** | **TBD** |
 **To Be Determined**
 
-> 📝 Fill in the above table with your actual results once evaluation is complete.
-
 ---
 
 ## 📉 Results & Evaluation
 
 The best performing model achieved the following on the held-out test set:
+
+Key takeaway:
+One of the biggest insights from this project was understanding how different model families respond to feature preparation and dataset size.
+
+For this experiment:
+- I used scaled features for Logistic Regression and K-Nearest Neighbors (KNN)
+- I used the original/non-scaled features for tree-based models
+- Based on the dataset, model evaluation, and performance metrics, the tree-based models performed better overall
+
+- A major reason for this is that the dataset is relatively small, and tree-based models were able to capture the structure of the data more effectively in this case. This reinforced an important lesson for me: model performance is not just about the algorithm itself, but also about the nature of the data, preprocessing choices, and how well the model fits the problem context.
 
 - **Accuracy:** `100%`
 - **Precision:** `100%`
@@ -219,7 +227,7 @@ The best performing model achieved the following on the held-out test set:
 - **AUC-ROC:** `1.00`
 
 Key observations:
-- The model performed particularly well in identifying CKD-positive cases with high recall, which is critical in a clinical screening context.
+- The models performed particularly well in identifying CKD-positive cases with high recall, which is critical in a clinical screening context.
 - Age group and specific blood markers (e.g. serum creatinine, eGFR) were among the top predictive features.
 - Medical aid membership band showed a moderate correlation with CKD prevalence, likely reflecting access to care patterns.
 
