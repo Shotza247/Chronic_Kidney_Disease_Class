@@ -23,7 +23,7 @@
 
 ## 📖 Project Overview
 
-This project applies supervised machine learning to classify patients as having Chronic Kidney Disease (CKD) or not, based on anonymized blood sample data. The goal is to assist medical researchers and healthcare practitioners in identifying CKD patterns early across different demographic segments — particularly age groups and medical aid membership bands.
+This project applies supervised machine learning to classify patients as having Chronic Kidney Disease (CKD) or not, based on 158 anonymized blood sample data. The goal is to assist medical researchers and healthcare practitioners in identifying CKD patterns early across different demographic segments — particularly age groups and medical aid membership bands.
 
 The model was developed as part of a support effort for a master's research project focused on chronic disease analysis within a South African community healthcare context.
 
@@ -114,42 +114,45 @@ Chronic_Kidney_Disease_Class/
 The main notebook `CKD_Observation.ipynb` is structured into the following sections:
 
 ### 1. 📥 Data Loading & Initial Inspection
-- Loading the anonymized CSV dataset
+- Loading the 158 anonymized CSV dataset
 - Viewing the first few rows, shape, and column types
 - Checking for missing values and duplicates
 
 ### 2. 🔍 Exploratory Data Analysis (EDA)
+- Analyzed statisticals
 - Distribution of the target variable (CKD vs non-CKD)
 - Feature distributions across age groups and medical aid bands
-- Correlation heatmaps
+- Correlation heatmaps -> evaluated high correlations
 - Box plots and histograms for key blood markers
 
 ### 3. 🧹 Data Preprocessing
-- Handling missing values (imputation strategies)
 - Encoding categorical variables (e.g. age bands, medical aid tiers)
-- Feature scaling / normalization
-- Train-test split
+- Droping Highly correlated column samples
+- Feature scaling / normalization for Logistic and KNN algorithms
+- Train-test split using an array of test_sizes 0.2, 0.25, 0.3
 
 ### 4. ⚙️ Feature Engineering
 - Selecting the most predictive features
-- Creating derived features if applicable
-- Dimensionality reduction (if used)
 
 ### 5. 🤖 Model Building
 - Baseline model selection and rationale
-- Models trained (e.g. Logistic Regression, Random Forest, XGBoost, etc.)
-- Hyperparameter tuning
+- Models trained (e.g. Logistic Regression, KNN, Random Forest, Gradient Boosting, etc.)
+- Hyperparameter tuning (solver, metric, max_depth, learning_rate, class_weight)
 - Cross-validation
-
+```
+Model evaluations can be high based on the small dataset. This does not mean our model is able to predict CKD cases perfectly it means that these evaluations are what we observe when we work on a sampled dataset.
+Version 2 of the project will use a larger dataset to test our models performances and we can them observe and compare the performance of our V1 models and V2 models.
+```
 ### 6. 📈 Model Evaluation
+- Evaluations metrics
 - Confusion Matrix
 - Classification Report (Precision, Recall, F1-Score)
 - ROC-AUC Curve
 - Feature importance plot
 
-### 7. 💾 Model Export *(if applicable)*
-- Saving the best model using `joblib` or `pickle`
-- Notes on how to load and run inference
+### 7. 💾 Model Export *(pplicable doe model.pkl files)*
+- Saving the models using `pickle`
+- ```Notes on how to load and run inference, coming soon with a Streamlit Application```
 
 ### 8. 🧾 Conclusions & Recommendations
 - Key findings from the model
@@ -171,9 +174,9 @@ The main notebook `CKD_Observation.ipynb` is structured into the following secti
 | Joblib / Pickle | Model serialization |
 | Jupyter Notebook | Development environment |
 
+```
 Install all dependencies via:
-
-```bash
+bash
 pip install -r requirements.txt
 ```
 
