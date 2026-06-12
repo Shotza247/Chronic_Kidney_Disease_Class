@@ -79,15 +79,32 @@ Chronic_Kidney_Disease_Class/
 │
 ├── README.md                   # Project documentation (you are here)
 ├── CKD_Observation.ipynb    # Main Jupyter Notebook
-├── requirements.txt            # Python dependencies
 ├── CKD_Dataset/
 │   └── ckd.csv      # Anonymized dataset
 ├── mlruns/
 │   └── Experiment_ID
-│   └── models
-├── mlaftifacts/
+│   └── models/0
+│       └── m-Experiement_ID
+│           └── MLmodel
+|           └── conda.yaml
+|           └── model.pkl
+|           └── python_env.yaml
+|           └── requirements.txt
+├── mlaftifacts/1
 │   └── Experiemtn_ID
+│       └── m-Experiemtn_ID/artifacts
+│           └── estimator.html
+|           └── metric_info.json
+|           └── training_confusion_matrix.png
+|           └── training_precision_recall.png
+|           └── training_roc_curve.png
 │   └── models
+│       └── m-Experiement_ID/artifacts
+│           └── MLmodel
+|           └── conda.yaml
+|           └── model.pkl
+|           └── python_env.yaml
+|           └── requirements.txt
 ```
 
 ---
