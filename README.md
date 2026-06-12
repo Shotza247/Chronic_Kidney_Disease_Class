@@ -65,7 +65,8 @@ The dataset includes a combination of clinical and demographic features. Common 
 - Blood Pressure readings
 - Albumin / Protein levels
 - Age group band
-- Medical aid membership tier
+- Diabetes Mellitus, Coronary Artery Disease, Appetite  
+- etc...
 
 > Feature names may differ slightly depending on how they appear in the notebook — refer to the data exploration section for exact column names.
 
